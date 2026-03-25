@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Min första Docker-app 🚀</h1>
+<p>Jag är DevOps nu</p>
+
+<script>
+fetch("/api")
+  .then(res => res.json())
+  .then(data => {
+    const p = document.createElement("p");
+    p.innerText = data.message;
+    document.body.appendChild(p);
+  })
+  .catch(err => console.error(err));
+</script>
+
+</body>
+</html>
